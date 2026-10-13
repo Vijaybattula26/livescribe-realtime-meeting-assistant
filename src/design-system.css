@@ -1,0 +1,83 @@
+/* ==============================================================================
+   LiveScribe Design System Tokens & Foundations
+   "Calm Listening Instrument"
+   ============================================================================== */
+
+:root {
+  /* Light Theme Tokens */
+  --paper: #F5F6F8;
+  --surface: #FFFFFF;
+  --surface-2: #EDF0F5;
+  --line: #DCE2EA;
+  --ink: #0F1B2D;
+  --ink-2: #4A5B70;
+  --ink-3: #7A8AA0;
+  --cobalt: #2B59FF;
+  --cobalt-hover: #1E46D8;
+  --live: #E8431F;
+  --amber: #9A5B00;
+  --amber-bg: #FFF1D3;
+  --done: #17714B;
+  --done-bg: #DDF3E8;
+  --shadow-layered: 0 1px 2px rgba(15, 27, 45, 0.04), 0 4px 16px rgba(15, 27, 45, 0.06);
+
+  /* Font Families */
+  --font-sans: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+.dark {
+  /* Dark Theme Tokens */
+  --paper: #0B1220;
+  --surface: #121B2D;
+  --surface-2: #18243A;
+  --line: #243350;
+  --ink: #E8EEF7;
+  --ink-2: #A3B2C7;
+  --ink-3: #60738C;
+  --cobalt: #7C98FF;
+  --cobalt-hover: #6584F5;
+  --live: #FF7A59;
+  --amber: #F2B84B;
+  --amber-bg: rgba(242, 184, 75, 0.15);
+  --done: #5FD3A0;
+  --done-bg: rgba(95, 211, 160, 0.15);
+  --shadow-layered: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Base Body Application Styling */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle Layered Shadow */
+.shadow-calm {
+  box-shadow: var(--shadow-layered);
+}
+
+/* Visible Focus Rings */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--cobalt);
+}
+
+/* Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
