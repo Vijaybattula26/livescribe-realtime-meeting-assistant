@@ -8,12 +8,12 @@ set -euo pipefail
 # ------------------------------------------------------------------------------
 # Configuration Variables (Specify your Google Cloud details here)
 # ------------------------------------------------------------------------------
-PROJECT_ID="YOUR_PROJECT_ID"
-REGION="us-central1"
-SERVICE_NAME="livescribe"
+PROJECT_ID="${GCP_PROJECT_ID:-YOUR_PROJECT_ID}"
+REGION="${GCP_REGION:-asia-south1}"
+SERVICE_NAME="${SERVICE_NAME:-livescribe}"
 
-if [[ "$PROJECT_ID" == "YOUR_PROJECT_ID" ]]; then
-  echo "Error: Please edit deploy/cloudrun.sh and set your real GCP PROJECT_ID." >&2
+if [[ "$PROJECT_ID" == "YOUR_PROJECT_ID" || "$PROJECT_ID" == "your-real-gcp-project-id" ]]; then
+  echo "Error: Please edit deploy/cloudrun.sh (or set GCP_PROJECT_ID env var) with your real GCP PROJECT_ID." >&2
   exit 1
 fi
 

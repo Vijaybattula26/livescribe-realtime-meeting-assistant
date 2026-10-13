@@ -2,6 +2,9 @@
 
 LiveScribe is a calm, focused listening instrument that transforms real-time speech into structured meeting intelligence without breaking conversational flow. Built with React 19, TypeScript, and a hardened Node.js WebSocket relay, it captures 16kHz microphone audio via the Web Audio API, streams it directly to Google's Gemini Multimodal Live API (`gemini-3.1-flash-live-preview`), renders low-latency transcripts alongside an audio-reactive canvas waveform, and extracts schema-validated action items, calendar-resolved deadlines, decisions, and meeting summaries using Gemini Flash (`gemini-3.1-flash-lite`).
 
+
+> **Deployment Status:** Containerized and configured for automated deployment to **Google Cloud Run** (`asia-south1`) with Google Cloud Secret Manager via [`deploy/cloudrun.sh`](file:///d:/live_project/deploy/cloudrun.sh). Public instances are gated by a secure access password (`APP_PASSWORD`) with constant-time verification, per-IP rate limiting, and brute-force lockout protection to shield the Gemini API quota.
+
 ---
 
 ## 📸 Screenshots

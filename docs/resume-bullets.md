@@ -26,4 +26,4 @@ Use these bullet options for Software Engineering (Full Stack / Systems) and AI 
 1. `[MEASURED_LATENCY_MS]`: Measure average latency reported in the UI status pill badge during live microphone streaming (typically 120–220 ms).
 2. `[REAL_AUDIO_PRECISION]`: Calculate from your filled `eval/real-audio-results.md` table using $\frac{\text{Correct}}{\text{Correct} + \text{Wrong}} \times 100$.
 3. `[REAL_AUDIO_RECALL]`: Calculate from your filled `eval/real-audio-results.md` table using $\frac{\text{Correct}}{\text{Correct} + \text{Missed}} \times 100$.
-4. `[TEST_COUNT]`: Currently `48` tests in Vitest test suite (`vitest run`).
+4. `[TEST_COUNT]`: Currently `49` tests in Vitest test suite (`vitest run`).
